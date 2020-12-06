@@ -38,9 +38,13 @@ app.get('/', (req, res) => {
 
 app.post('/store-goal', (req, res) => {
   const enteredGoal = req.body.goal;
-  console.log(enteredGoal);
+  console.log({ enteredGoal });
   userGoal = enteredGoal;
   res.redirect('/');
 });
 
-app.listen(80);
+const server = app.listen(3000);
+
+// server.close();
+
+console.log('hello world');
